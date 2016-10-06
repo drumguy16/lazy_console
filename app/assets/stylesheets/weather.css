@@ -4,6 +4,12 @@
   color: #ffffff;
 }
 
+.weather-icon-container {
+  position: absolute;
+  top:2%;
+  right:2%;
+}
+
 .info_bg p {
   margin-bottom: -.2em;
 }
@@ -30,7 +36,7 @@
   overflow: hidden;
 }
 
-.container {
+.weather-widget-container {
   display:none;
   position: absolute;
   top: 0;

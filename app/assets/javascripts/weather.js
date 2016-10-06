@@ -7,7 +7,18 @@ if("geolocation" in navigator) {
 }
 
 $(document).ready(function() {
-	setInterval(getWeather, 1000);
+	// setInterval(getWeather, 1000);
+	$("#weather-widget-icon").click(function(event) {
+		event.preventDefault();
+		$(".weather-icon-container").toggle(400);
+		$(".weather-widget-container").toggle(400);
+	});
+	$("#weather-widget").click(function(event) {
+		event.preventDefault();
+		$(".weather-icon-container").toggle(400);
+		$(".weather-widget-container").toggle(400);
+	});
+
 });
 
 function loadWeather(location, woeid) {

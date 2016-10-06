@@ -26,6 +26,14 @@ gem 'bcrypt', '~> 3.1.7'
 #devise user authentication
 gem 'devise'
 
+#Bootstrap 4
+gem 'bootstrap', '~> 4.0.0.alpha4'
+
+#teather for tooltips and popovers
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
