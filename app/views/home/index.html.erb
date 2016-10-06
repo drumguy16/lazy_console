@@ -3,15 +3,21 @@
 	<input type="submit" value="Submit Theme" id="theme-submit">
 </form>
 
-<div class="container clearfix">
-    <p class="location"></p>
-    <p class="temperature"></p>
-    <div class="climate_bg"><%= image_tag("", class: "weathericon") %></div>
-    	<div class="info_bg">
-       		<%= image_tag("Droplet.svg", alt: 'Droplet', class: 'dropicon') %>
-       		<p class="humidity"></p>
+<a href="#" id="weather-widget">
+	<div class="weather-widget-container clearfix">
+	    <p class="location"></p>
+	    <p class="temperature"></p>
+	    <div class="climate_bg"><%= image_tag("", class: "weathericon") %></div>
+	    	<div class="info_bg">
+	       		<%= image_tag("Droplet.svg", alt: 'Droplet', class: 'dropicon') %>
+	       		<p class="humidity"></p>
 
-    		<%= image_tag("Wind.svg", alt: 'Wind', class: 'windicon') %>
-      	<div class="windspeed"></div>
-    </div>
+	    		<%= image_tag("Wind.svg", alt: 'Wind', class: 'windicon') %>
+	      	<div class="windspeed"></div>
+	    </div>
+	</div>
+</a>
+
+<div class="weather-icon-container">
+	<%= link_to(image_tag("weather-widget-icon.png", width: '60px', height: '60px'), "#", id: "weather-widget-icon") %>
 </div>
