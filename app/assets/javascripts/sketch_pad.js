@@ -4,6 +4,11 @@ var context = $canvas[0].getContext("2d");
 var lastEvent;
 var mouseDown = false;
 
+$("#sketchpad-widget-icon").click(function(event) {
+  event.preventDefault();
+  $("#sketch-pad-widget").toggle(400);
+});
+
 $(".controls").on('click','li', function(event) {
   event.preventDefault();
   $(this).siblings().removeClass("selected");

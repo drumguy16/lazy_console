@@ -1,3 +1,13 @@
+#sketch-pad-icon-container {
+  position: absolute;
+  top:12%;
+  right:2%;
+}
+
+#sketch-pad-widget {
+	display: none;
+}
+
 canvas {
 	background: #fff;
 	display: block;
