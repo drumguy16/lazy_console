@@ -1,20 +1,31 @@
 $(document).ready(function() {
+	
 	$('#theme').submit(function(event) {
 		event.preventDefault();
-		var $theme = $('#theme-key').val(); 
-		var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+		var $theme = $('#theme-key').val().replace(/[ ]+/g, '+');
+		var flickrAPI = "http://api.flickr.com/services/rest/";
+		var apiKey = FlickrKey;
+		var userId = '145628052@N07'
 		var flickrOptions = {
+			method: 'flickr.photos.search',
+			api_key: FlickrKey,
 			format: 'json',
-			tags: $theme
+			text: $theme
 		};
 		function displayPhoto(data) {
 			var min = Math.ceil(0);
-  			var max = Math.floor(data.items.length);
+  			var max = Math.floor(data.photos.photo.length);
 			var item_number = Math.floor(Math.random() * (max - min + 1)) + min;
-			var photo = data.items[item_number];
-			$('body').css('background-image', 'url(' + photo.media.m + ')' );
+			var photo = data.photos.photo[item_number].id;
+			$.getJSON('https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + apiKey + '&photo_id=' + photo + '&format=json&nojsoncallback=1', function(data) {
+				var largePhoto= data.sizes.size[data.sizes.size.length - 1];
+				var largeURL = largePhoto.source
+				$('body').css('background-image', 'url(' + largeURL + ')')
+				$('#theme').toggle(400);
+			});
 
 		}
-	$.getJSON(flickrAPI, flickrOptions, displayPhoto);
+	$.getJSON('https://api.flickr.com/services/rest/?&nojsoncallback=1', flickrOptions, displayPhoto) 
+		
 	}); //End Submit Click
 });// End Ready

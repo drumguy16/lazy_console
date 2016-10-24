@@ -10,16 +10,10 @@ $(document).ready(function() {
 	// setInterval(getWeather, 1000);
 	$("#weather-widget-icon").click(function(event) {
 		event.preventDefault();
-		$(".weather-icon-container").toggle(400);
-		$(".weather-widget-container").toggle(400);
+		$("#weather-widget").toggle(400);
 	});
-	$("#weather-widget").click(function(event) {
-		event.preventDefault();
-		$(".weather-icon-container").toggle(400);
-		$(".weather-widget-container").toggle(400);
-	});
-
-});
+	$.getScript("/assets/sketch_pad.js");
+}); // End ready
 
 function loadWeather(location, woeid) {
 	$.simpleWeather({
@@ -44,5 +38,7 @@ function loadWeather(location, woeid) {
 		error: function(error) {
 			$(".error").html('<p>' + error + '</p>');
 		}
+
+
 	}); // End simpleWeather
 } // End loadWeather

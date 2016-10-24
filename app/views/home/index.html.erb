@@ -1,23 +1,11 @@
-<form id="theme">
-	<input type="search" name="search" id="theme-key">
-	<input type="submit" value="Submit Theme" id="theme-submit">
-</form>
+<%= render "icons"  %>
 
-<a href="#" id="weather-widget">
-	<div class="weather-widget-container clearfix">
-	    <p class="location"></p>
-	    <p class="temperature"></p>
-	    <div class="climate_bg"><%= image_tag("", class: "weathericon") %></div>
-	    	<div class="info_bg">
-	       		<%= image_tag("Droplet.svg", alt: 'Droplet', class: 'dropicon') %>
-	       		<p class="humidity"></p>
+<%= render "theme"  %>
 
-	    		<%= image_tag("Wind.svg", alt: 'Wind', class: 'windicon') %>
-	      	<div class="windspeed"></div>
-	    </div>
-	</div>
-</a>
+<%= render "weather"  %>
 
-<div class="weather-icon-container">
-	<%= link_to(image_tag("weather-widget-icon.png", width: '60px', height: '60px'), "#", id: "weather-widget-icon") %>
-</div>
+<%= render "sketchpad"  %>
+
+<%= render "pong"  %>
+
+<%= render "us_capitals"  %>

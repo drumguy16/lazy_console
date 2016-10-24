@@ -1,10 +1,14 @@
   body {
-  background-color: #bebebe;
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font: 400 1em/1.38 Montserrat;
   color: #ffffff;
 }
 
-.weather-icon-container {
+#weather-icon-container {
   position: absolute;
   top:2%;
   right:2%;
@@ -39,7 +43,6 @@
 .weather-widget-container {
   display:none;
   position: absolute;
-  top: 0;
   bottom: 0;
   /*left: 0;*/
   right: 0;
