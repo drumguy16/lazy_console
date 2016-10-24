@@ -1,37 +1,11 @@
-<form class="col-sm-4" id="theme">
-	<div class="search-field form-group">
-		<input class="form-control"  type="text" name="search" id="theme-key" placeholder="console theme">
-	</div>
-	<div class="submit form-group">
-		<input type="submit" value="Submit Theme" id="theme-submit" class="btn btn-primary">
-	</div>
-</form>
+<%= render "icons"  %>
 
+<%= render "theme"  %>
 
-<div class="weather-widget-container clearfix" id="weather-widget">
-    <p class="location"></p>
-    <p class="temperature"></p>
-    <div class="climate_bg"><%= image_tag("", class: "weathericon") %></div>
-    	<div class="info_bg">
-       		<%= image_tag("Droplet.svg", alt: 'Droplet', class: 'dropicon') %>
-       		<p class="humidity"></p>
-
-    		<%= image_tag("Wind.svg", alt: 'Wind', class: 'windicon') %>
-      	<div class="windspeed"></div>
-    </div>
-</div>
-
-
-<div id="weather-icon-container">
-	<%= link_to(image_tag("weather-widget-icon.png", width: '60px', height: '60px'), "#", id: "weather-widget-icon") %>
-</div>
-
-<div id="sketch-pad-icon-container">
-	<%= link_to(image_tag("sketchpad-icon.png", width: '60px', height: '60px'), "#", id: "sketchpad-widget-icon") %>
-</div>
-
-<div id="theme-icon-container">
-	<%= link_to(image_tag("theme-icon.png", width: '60px', height: '60px'), "#", id: "theme-widget-icon") %>
-</div>
+<%= render "weather"  %>
 
 <%= render "sketchpad"  %>
+
+<%= render "pong"  %>
+
+<%= render "us_capitals"  %>

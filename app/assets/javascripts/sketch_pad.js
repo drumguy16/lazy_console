@@ -1,13 +1,10 @@
 var color = $(".selected").css("background-color");
-var $canvas = $("canvas");
-var context = $canvas[0].getContext("2d");
+var $canvas = $("#sketchCanvas");
+var context = $canvas.getContext("2d");
 var lastEvent;
 var mouseDown = false;
 
-$("#sketchpad-widget-icon").click(function(event) {
-  event.preventDefault();
-  $("#sketch-pad-widget").toggle(400);
-});
+$canvas.css('width', window.width)
 
 $(".controls").on('click','li', function(event) {
   event.preventDefault();

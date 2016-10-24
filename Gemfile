@@ -29,6 +29,10 @@ gem 'devise'
 #Bootstrap 4
 gem 'bootstrap', '~> 4.0.0.alpha4'
 
+# ES6
+gem 'sprockets'
+gem 'sprockets-es6', require: 'sprockets/es6'
+
 #teather for tooltips and popovers
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

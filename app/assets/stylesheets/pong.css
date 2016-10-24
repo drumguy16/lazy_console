@@ -1,0 +1,15 @@
+#pong-icon-container {
+	position: absolute;
+  	top:33%;
+  	right:2%;
+}
+
+#pong_board {
+	display: none;
+	border:2px solid #8DDE00;
+	box-shadow: none;
+}
+
+#pong-board-container {
+	margin-left:30%;
+}
