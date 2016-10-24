@@ -4,7 +4,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var $theme = $('#theme-key').val().replace(/[ ]+/g, '+');
 		var flickrAPI = "http://api.flickr.com/services/rest/";
-		var apiKey = 'e29cd81aa86ac7e648ee767247bbf0a9';
+		var apiKey = FlickrKey;
 		var userId = '145628052@N07'
 		var flickrOptions = {
 			method: 'flickr.photos.search',
